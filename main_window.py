@@ -55,16 +55,22 @@ btn_answer = QPushButton("Відповісти")
 
 line1 = QHBoxLayout()
 line1.addWidget(btn_menu)
+line1.addStretch(2)
 line1.addWidget(btn_sleep)
 line1.addWidget(box_minutes)
 line1.addWidget(box_minutes_lbl)
 
 main_line = QVBoxLayout()
 main_line.addLayout(line1)
-main_line.addWidget(question_lbl, alignment=(Qt.AlineCenter, Qt.AlignCenter))
-main_line.addWidget(answer_group_box)
-main_line.addWidget(result_group_box)
+main_line.addWidget(question_lbl, alignment=(Qt.AlignCenter|Qt.AlignCenter))
+
+line2 = QHBoxLayout()
+line2.addWidget(answer_group_box)
+line2.addWidget(result_group_box)
+
+main_line.addLayout(line2, stretch=4)
 main_line.addWidget(btn_answer)
+main_line.addStretch(1)
 
 main_window.setLayout(main_line)
 
