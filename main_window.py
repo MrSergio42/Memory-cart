@@ -10,7 +10,7 @@ btn_menu = QPushButton("Меню")
 btn_sleep = QPushButton("Відпочити")
 
 box_minutes = QSpinBox() # Лічильник секунд 
-box_minutes.setValue(30)
+box_minutes.setValue(50)
 box_minutes_lbl = QLabel("хвилин")
 
 question_lbl = QLabel('Question')
@@ -70,7 +70,7 @@ line2.addWidget(result_group_box)
 
 main_line.addLayout(line2, stretch=4)
 main_line.addWidget(btn_answer)
-main_line.addStretch(1)
+main_line.addStretch(0)
 
 main_window.setLayout(main_line)
 
